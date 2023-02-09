@@ -20,7 +20,7 @@ async function run() {
         data: myContract.methods.send("0xCA8415E9C49C69CAC55d640AA752cfe95Aeca071", "1").encodeABI()
     }, "0x3762493fc83d95ce849a7003b06a7161843219aaf68e3651f99b6bc521a6abbd")
 
-    console.log('=====');
+    console.log('=====================================================================================');
     console.log(myContract.methods.send("0xCA8415E9C49C69CAC55d640AA752cfe95Aeca071", "1").encodeABI());
     // 发送
     web3.eth.sendSignedTransaction(txn.rawTransaction).on('transactionHash', function(hash){
