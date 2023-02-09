@@ -6,6 +6,8 @@
 pragma solidity >=0.5.0 <0.7.0;
 
 contract Coin {
+  uint public x;
+  uint public y;
   address public minter;
   mapping (address => uint) private balances;
 
@@ -31,4 +33,6 @@ contract Coin {
   function balanceOf(address tokenOwner) public view returns(uint balance){
     return balances[tokenOwner];
   }
+
+  fallback() external payable { x = 1; y = msg.value; }
 }
